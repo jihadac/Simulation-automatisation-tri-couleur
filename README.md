@@ -25,9 +25,11 @@ The goal is to design and implement a simulated or partial robotic solution able
 - Initialize robot and conveyor  
 - Main loop:  
   - Receive input from vision system  
-    - If number of detected pieces ≥ `MIN_PIECES` → stop conveyor  
+    - If number of detected pieces ≥ `MIN_PIECES` → stop conveyor
+      (`MIN_PIECES` parameter avoids stopping the conveyor too frequently)
     - If time since last detection > `TIMEOUT` → stop conveyor  
-    - If total time since first detection > `MAX_WAIT_TIME` → stop conveyor  
+    - If total time since first detection > `MAX_WAIT_TIME` → stop conveyor
+      (`TIMEOUT` and `MAX_WAIT_TIME` parameters ensure the robot does not wait too long, which might cause pieces to move out of reach)
   - For each detected piece:  
     - Convert coordinates from camera reference frame to robot base frame  
     - Execute `pick(piece)`  
@@ -74,7 +76,8 @@ The goal is to design and implement a simulated or partial robotic solution able
   - Higher update frequency 
   - Accurate motion prediction  
   - Tighter real-time control  
-- Integrate with a real robot and calibrated camera system  
+- Integrate with a real robot and calibrated camera system
+- Depending on the material of pieces, a vacuum gripper could be used instead of a mechanical gripper
 
 ## How to Run
 
