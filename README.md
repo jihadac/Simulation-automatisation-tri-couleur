@@ -14,7 +14,7 @@ The goal is to design and implement a simulated or partial robotic solution able
 - Update frequency approximately 5 Hz  
 - Conveyor and robot base assumed to be at the same height  
 - Dummy values used for simulation
-- Pick/place failures simulated to mimic real-world exceptions (label (=color) assumed to be always correct)
+- Pick/place failures simulated (label (=color) assumed to be always correct)
 - Camera coordinates transformed into robot’s base frame using a known transformation matrix (simulated) to express everything wrt robot's base frame
 - Time delays are used for readability of logs and roughly simulate real motion times
 
