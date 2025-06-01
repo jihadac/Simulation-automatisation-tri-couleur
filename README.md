@@ -5,8 +5,6 @@ This project simulates the automated sorting of red and blue parts arriving in a
 
 The goal is to design and implement a simulated or partial robotic solution able to detect pieces, classify them by color, and place them into the correct bin focusing on pick-and-place logic and sequencing of actions.
 
----
-
 ## Assumptions
 
 - Detected pieces stored as a list of dictionaries, e.g.:  
@@ -19,8 +17,6 @@ The goal is to design and implement a simulated or partial robotic solution able
 - Pick/place failures simulated to mimic real-world exceptions (label (=color) assumed to be always correct)
 - Camera coordinates transformed into robot’s base frame using a known transformation matrix (simulated) to express everything wrt robot's base frame
 - Time delays are used for readability of logs and roughly simulate real motion times
-
----
 
 ## Code Structure
 
@@ -55,7 +51,6 @@ The goal is to design and implement a simulated or partial robotic solution able
  - If yes → Return success
  - If no → Return failure
  
-
 ### `place(piece)`
 
 - Move from current pose to target place pose (= (well) above red or blue container)  
@@ -67,16 +62,12 @@ The goal is to design and implement a simulated or partial robotic solution able
 - Check if release was successful  
 - Move slightly upward again
 
----
-
 ## Current Limitations
 
 - No `config.py`: all parameters are hardcoded within scripts  
 - Conveyor simulated as stopped during picking; no "pick-on-the-fly" functionality  
 - No real calibration between camera and robot  
 - Inverse kinematics is simulated (no real IK solver used)  
-
----
 
 ## Future Improvements
 
@@ -88,17 +79,14 @@ The goal is to design and implement a simulated or partial robotic solution able
 - Add a `config.py` to centralize and easily modify parameters  
 - Integrate with a real robot and calibrated camera system  
 
----
-
 ## How to Run
 
 1. Ensure Python 3.x is installed  
 2. Run the main simulation script:  
    python main.py
 
----
 ## Visualizations
 
-Scene images and flowcharts were created with Figma.
+Scene images were created with Figma.
 
 
