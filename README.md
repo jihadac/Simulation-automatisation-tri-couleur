@@ -64,7 +64,6 @@ The goal is to design and implement a simulated or partial robotic solution able
 
 ## Current Limitations
 
-- No `config.py`: all parameters are hardcoded within scripts  
 - Conveyor simulated as stopped during picking; no "pick-on-the-fly" functionality  
 - No real calibration between camera and robot  
 - Inverse kinematics is simulated (no real IK solver used)  
@@ -75,8 +74,6 @@ The goal is to design and implement a simulated or partial robotic solution able
   - Higher update frequency 
   - Accurate motion prediction  
   - Tighter real-time control  
-
-- Add a `config.py` to centralize and easily modify parameters  
 - Integrate with a real robot and calibrated camera system  
 
 ## How to Run
